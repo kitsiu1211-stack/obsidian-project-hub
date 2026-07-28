@@ -1,0 +1,255 @@
+{
+  "main": {
+    "id": "f3561d2bf7cf6787",
+    "type": "split",
+    "children": [
+      {
+        "id": "9ca39cb66034218a",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "828b59b1e5f2cccb",
+            "type": "leaf",
+            "state": {
+              "type": "graph",
+              "state": {},
+              "icon": "lucide-git-fork",
+              "title": "关系图谱"
+            }
+          },
+          {
+            "id": "14739d45cae7aba6",
+            "type": "leaf",
+            "state": {
+              "type": "graph",
+              "state": {},
+              "icon": "lucide-git-fork",
+              "title": "关系图谱"
+            }
+          },
+          {
+            "id": "936f1c7a5c4d00c4",
+            "type": "leaf",
+            "state": {
+              "type": "graph",
+              "state": {},
+              "icon": "lucide-git-fork",
+              "title": "关系图谱"
+            }
+          },
+          {
+            "id": "9d2b1b690171a7c7",
+            "type": "leaf",
+            "state": {
+              "type": "galaxy-view",
+              "state": {},
+              "icon": "orbit",
+              "title": "Galaxy view"
+            }
+          }
+        ],
+        "currentTab": 3
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "25658b81eed97207",
+    "type": "split",
+    "children": [
+      {
+        "id": "a188b1c327d4315f",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "117ce69c026bbff1",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": false
+              },
+              "icon": "lucide-folder-closed",
+              "title": "文件列表"
+            }
+          },
+          {
+            "id": "6989bc58d3a4fd76",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "搜索"
+            }
+          },
+          {
+            "id": "417ed3042b36f341",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "书签"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "a935aa0628b02ff6",
+    "type": "split",
+    "children": [
+      {
+        "id": "2f1885a5c0852c1f",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "bfee3ef144f6ca4f",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "SCHEMA.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "SCHEMA 的反向链接列表"
+            }
+          },
+          {
+            "id": "59e89b0309d507ca",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "SCHEMA.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "SCHEMA 的出链列表"
+            }
+          },
+          {
+            "id": "45f232d39e4d279f",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "标签"
+            }
+          },
+          {
+            "id": "d7c67bcf7b75e3c3",
+            "type": "leaf",
+            "state": {
+              "type": "all-properties",
+              "state": {
+                "sortOrder": "frequency",
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-archive",
+              "title": "添加笔记属性"
+            }
+          },
+          {
+            "id": "b022870532f5caf3",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "SCHEMA.md",
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "SCHEMA 的大纲"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:打开快速切换": false,
+      "graph:查看关系图谱": false,
+      "canvas:新建白板": false,
+      "daily-notes:打开/创建今天的日记": false,
+      "templates:插入模板": false,
+      "command-palette:打开命令面板": false,
+      "bases:新建数据库": false,
+      "galaxy-view:打开星系视图": false
+    }
+  },
+  "active": "9d2b1b690171a7c7",
+  "lastOpenFiles": [
+    "AI工具与框架/Cerebras知识库架构.md",
+    "AI工具与框架",
+    "reviews/2026-W30.md",
+    "AI培训/AI基础概念入门.md",
+    "AI培训/README.md",
+    "AI培训/2026-07-23 亚洲商学院分享复盘.md",
+    "AI培训",
+    "AI场景/A2A链路故障记录.md",
+    "AI场景/Agent协作群-Bot路由表.md",
+    "concepts/主题31-A2A链路故障记录.md",
+    "AI场景/AI外语教练.md",
+    "AI场景",
+    "concepts/主题30-团队智能体信息联动与GBrain扩展.md",
+    "concepts/主题29-单Agent到多Agent的演进时机.md",
+    "concepts/主题28-晋升驱动AI转型.md",
+    "hermes-skills/manager-ai-onboarding/framework-v1.0.md",
+    "hermes-skills/manager-ai-onboarding",
+    "未命名.canvas",
+    "2026-07-17.md",
+    "hermes-skills/feishu-meeting-listen/agent-join-meeting.md",
+    "hermes-skills/feishu-meeting-listen/v4-archive-20260717.md",
+    "未命名.base",
+    "hermes-skills/feishu-meeting-listen/polling.md",
+    "hermes-skills/feishu-meeting-listen/versions/V4-realtime-asr-20260717.md",
+    "hermes-skills/feishu-meeting-listen/versions/V3-dual-tts-20260717.md",
+    "concepts/主题1-Agentic Coding.md",
+    "hermes-skills/index.md",
+    "hermes-skills/feishu-meeting-listen/versions/V3-restored-20260716.md",
+    "hermes-skills/feishu-meeting-listen/retrospective.md",
+    "hermes-skills/feishu-meeting-listen/poll.sh",
+    "hermes-skills/feishu-meeting-listen/meeting_detect.py",
+    "hermes-skills/feishu-meeting-listen/SKILL.md",
+    "hermes-skills/feishu-meeting-listen/versions",
+    "hermes-skills/feishu-meeting-listen",
+    "hermes-skills",
+    "reviews/2026-W28.md",
+    "concepts/feishu-auth.png",
+    "clients/智能派-ELEGOO.md"
+  ]
+}

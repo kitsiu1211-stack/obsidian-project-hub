@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>袁鑫杰 · AI 项目中枢</title>
+<style>
+:root {
+  --bg: #0b0f14;
+  --card-bg: #141a23;
+  --border: #1e2a3a;
+  --text: #c8cdd4;
+  --text-dim: #6b7280;
+  --accent: #4f8ff7;
+  --accent-glow: rgba(79,143,247,0.15);
+  --green: #34d399;
+  --yellow: #fbbf24;
+  --red: #f87171;
+  --purple: #a78bfa;
+  --radius: 10px;
+}
+* { margin:0; padding:0; box-sizing:border-box; }
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  background: var(--bg); color: var(--text);
+  line-height: 1.6; min-height: 100vh;
+}
+.container { max-width: 1100px; margin: 0 auto; padding: 24px; }
+
+/* Header */
+.header {
+  text-align: center; padding: 60px 24px 40px;
+}
+.header h1 {
+  font-size: 2.4rem; font-weight: 700;
+  background: linear-gradient(135deg, #4f8ff7, #a78bfa);
+  -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+}
+.header p { color: var(--text-dim); font-size: 1.05rem; margin-top: 8px; }
+.header .stats {
+  display: flex; justify-content: center; gap: 32px; margin-top: 24px;
+  flex-wrap: wrap;
+}
+.header .stat {
+  text-align: center;
+}
+.header .stat .num { font-size: 2rem; font-weight: 700; color: var(--accent); }
+.header .stat .label { font-size: 0.8rem; color: var(--text-dim); margin-top: 2px; }
+
+/* Dashboard */
+.dashboard {
+  display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 16px; margin-bottom: 32px;
+}
+.dash-card {
+  background: var(--card-bg); border: 1px solid var(--border);
+  border-radius: var(--radius); padding: 20px;
+}
+.dash-card h3 { font-size: 0.75rem; color: var(--text-dim); text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 12px; }
+.bar { height: 6px; border-radius: 3px; background: var(--border); margin-top: 8px; }
+.bar-fill { height: 100%; border-radius: 3px; transition: width 0.6s ease; }
+.bar-fill.active { background: var(--green); }
+.bar-fill.paused { background: var(--yellow); }
+.bar-fill.critical { background: var(--accent); }
+
+/* Project Cards */
+.section-title {
+  font-size: 1.1rem; font-weight: 600; margin-bottom: 16px;
+  display: flex; align-items: center; gap: 8px;
+}
+.section-title::before {
+  content: ''; width: 4px; height: 20px; background: var(--accent);
+  border-radius: 2px;
+}
+.projects { display: grid; gap: 16px; margin-bottom: 40px; }
+.project-card {
+  background: var(--card-bg); border: 1px solid var(--border);
+  border-radius: var(--radius); padding: 24px;
+  cursor: pointer; transition: all 0.2s;
+  position: relative; overflow: hidden;
+}
+.project-card:hover { border-color: var(--accent); box-shadow: 0 0 20px var(--accent-glow); }
+.project-card .badge {
+  display: inline-block; padding: 3px 10px; border-radius: 12px;
+  font-size: 0.7rem; font-weight: 600; margin-bottom: 12px;
+}
+.badge-active { background: rgba(52,211,153,0.15); color: var(--green); }
+.badge-paused { background: rgba(251,191,36,0.15); color: var(--yellow); }
+.badge-critical { background: rgba(79,143,247,0.15); color: var(--accent); }
+.project-card h2 { font-size: 1.2rem; margin-bottom: 6px; }
+.project-card .summary { color: var(--text-dim); font-size: 0.9rem; margin-bottom: 12px; }
+.project-card .meta {
+  display: flex; gap: 16px; font-size: 0.75rem; color: var(--text-dim);
+  flex-wrap: wrap;
+}
+.project-card .meta span { display: flex; align-items: center; gap: 4px; }
+
+/* Detail Panel */
+.detail-overlay {
+  display: none; position: fixed; inset: 0; background: rgba(0,0,0,0.7);
+  z-index: 100; justify-content: center; align-items: center; padding: 20px;
+}
+.detail-overlay.open { display: flex; }
+.detail-panel {
+  background: var(--card-bg); border: 1px solid var(--border);
+  border-radius: var(--radius); max-width: 700px; width: 100%;
+  max-height: 85vh; overflow-y: auto; padding: 32px;
+}
+.detail-panel h2 { font-size: 1.5rem; margin-bottom: 8px; }
+.detail-panel .status-row { margin-bottom: 20px; }
+.detail-panel h3 { font-size: 0.95rem; margin: 20px 0 8px; color: var(--accent); }
+.detail-panel ul { padding-left: 20px; }
+.detail-panel li { color: var(--text-dim); font-size: 0.9rem; margin-bottom: 4px; }
+.detail-panel table {
+  width: 100%; border-collapse: collapse; font-size: 0.85rem; margin: 12px 0;
+}
+.detail-panel th, .detail-panel td {
+  text-align: left; padding: 8px 12px; border-bottom: 1px solid var(--border);
+}
+.detail-panel th { color: var(--text-dim); font-weight: 500; }
+.close-btn {
+  float: right; background: none; border: none; color: var(--text-dim);
+  font-size: 1.4rem; cursor: pointer; padding: 4px 8px;
+}
+.close-btn:hover { color: var(--text); }
+
+/* Timeline */
+.timeline { position: relative; padding-left: 24px; }
+.timeline::before {
+  content: ''; position: absolute; left: 8px; top: 4px; bottom: 4px;
+  width: 2px; background: var(--border);
+}
+.timeline-item { position: relative; margin-bottom: 16px; }
+.timeline-item::before {
+  content: ''; position: absolute; left: -20px; top: 6px;
+  width: 8px; height: 8px; border-radius: 50%;
+  background: var(--accent); border: 2px solid var(--card-bg);
+}
+.timeline-item .date { font-size: 0.75rem; color: var(--text-dim); }
+.timeline-item .content { font-size: 0.9rem; margin-top: 2px; }
+
+/* Responsive */
+@media (max-width: 640px) {
+  .header h1 { font-size: 1.8rem; }
+  .dashboard { grid-template-columns: 1fr; }
+}
+</style>
+</head>
+<body>
+<div class="container">
+
+<!-- Header -->
+<header class="header">
+  <h1>项目中枢</h1>
+  <p>AI 能力 × 真实业务 — 所有项目一站式管理</p>
+  <div class="stats">
+    <div class="stat"><div class="num" id="stat-active">3</div><div class="label">进行中</div></div>
+    <div class="stat"><div class="num" id="stat-total">4</div><div class="label">总项目</div></div>
+    <div class="stat"><div class="num">8+</div><div class="label">已发布 Skill</div></div>
+  </div>
+</header>
+
+<!-- Dashboard -->
+<section class="dashboard">
+  <div class="dash-card">
+    <h3>项目状态分布</h3>
+    <div style="display:flex;gap:12px;font-size:0.8rem;margin-bottom:8px">
+      <span>🟢 进行中 <strong>3</strong></span>
+      <span>🟡 计划中 <strong>0</strong></span>
+      <span>⚪ 已完成 <strong>0</strong></span>
+    </div>
+    <div class="bar"><div class="bar-fill active" style="width:75%"></div></div>
+  </div>
+  <div class="dash-card">
+    <h3>优先级分布</h3>
+    <div style="font-size:0.8rem;margin-bottom:8px">
+      <span>🔴 Critical <strong>1</strong></span>
+      <span style="margin-left:12px">🟠 High <strong>2</strong></span>
+      <span style="margin-left:12px">🟢 Medium <strong>1</strong></span>
+    </div>
+    <div class="bar"><div class="bar-fill critical" style="width:100%"></div></div>
+  </div>
+  <div class="dash-card">
+    <h3>近期活动</h3>
+    <div style="font-size:0.8rem;color:var(--text-dim)">
+      <div>07/28 · TWS 认证通过</div>
+      <div>07/28 · 话术手册发布</div>
+      <div>07/27 · Agent 群体系完善</div>
+    </div>
+  </div>
+</section>
+
+<!-- Projects -->
+<section>
+  <div class="section-title">项目列表</div>
+  <div class="projects" id="project-list"></div>
+</section>
+
+</div>
+
+<!-- Detail Overlay -->
+<div class="detail-overlay" id="overlay" onclick="if(event.target===this) closeDetail()">
+  <div class="detail-panel" id="panel"></div>
+</div>
+
+<script>
+const projects = [
+  {
+    id: "flying-book-ai",
+    title: "飞书 AI 专项",
+    status: "active",
+    priority: "critical",
+    category: "feishu-ai",
+    startDate: "2026-Q2",
+    tags: ["飞书", "AI", "销售", "Agent"],
+    summary: "推动飞书 AI 商业化落地——客户场景挖掘、Token 消耗加速、Agent 协作体系搭建",
+    goals: [
+      "加速客户 Token 消耗，对抗 WorkBuddy/QoderWork 竞争",
+      "搭建 Agent 群协作体系，降低切换成本",
+      "沉淀行业 AI 落地案例，形成可复制销售弹药"
+    ],
+    progress: [
+      { done: true, text: "销售话术手册完成（豆包 vs Aily vs WorkBuddy）" },
+      { done: true, text: "媒体 PR 口径整理（财联社/36氪/财经天下）" },
+      { done: true, text: "飞书商务计算器上线" },
+      { done: true, text: "Agent 群协作体系搭建完成" },
+      { done: false, text: "行业方案沉淀与规模化复制" }
+    ],
+    milestones: [
+      { date: "2026-Q2", event: "AI 专项启动，Q2 ARR 同比增长 >100%" },
+      { date: "2026-07", event: "话术手册 + 媒体口径完成" },
+      { date: "2026-Q3", event: "加速客户 Token 消耗，行业方案沉淀" }
+    ],
+    logs: [
+      { date: "2026-07-28", text: "整理三篇媒体 PR 关键数据; TRAE Work 定位从 Coding 转向办公场景" },
+      { date: "2026-07-27", text: "完成豆包 vs Aily vs WorkBuddy 销售话术手册（基于内部文档验证）" }
+    ]
+  },
+  {
+    id: "tws",
+    title: "TRAE Work Specialist",
+    status: "active",
+    priority: "high",
+    category: "TWS",
+    startDate: "2026-07-28",
+    tags: ["直播", "电商", "内容共创", "Skill"],
+    summary: "TRAE Work 官方认证 Specialist，定期产出直播分享、最佳实践文章与可复用 Skill",
+    goals: [
+      "成为 TRAE Work 生态优质内容贡献者",
+      "每季度完成 3+ 项有效产出",
+      "将 SkillHub 技能库移植到 TRAE Work 版本"
+    ],
+    progress: [
+      { done: true, text: "Specialist 认证通过" },
+      { done: true, text: "报名电商行业课程第1场" },
+      { done: true, text: "整理 7 个分享主题方向 + 8 个 Skill 清单" },
+      { done: false, text: "准备直播 Demo（销售数据分析/竞品监控）" },
+      { done: false, text: "产出第1篇最佳实践文章" }
+    ],
+    milestones: [
+      { date: "2026-07-28", event: "Specialist 认证通过" },
+      { date: "2026-08", event: "电商课程第1场直播" },
+      { date: "2026-Q3", event: "累计 3+ 项有效产出" }
+    ],
+    logs: [
+      { date: "2026-07-28", text: "完成 Specialist 面试; 整理分享主题 + Skill 清单" }
+    ]
+  },
+  {
+    id: "hermes-agent",
+    title: "Hermes Agent 协作体系",
+    status: "active",
+    priority: "high",
+    category: "personal",
+    startDate: "2026-04",
+    tags: ["Agent", "飞书", "CLI", "自动化"],
+    summary: "构建以 Hermes 为核心的飞书多 Agent 协作群，实现 Agent-to-Agent 自动任务分派",
+    goals: [
+      "让多个 AI Agent 在飞书群内自动协同",
+      "主 Agent 自动分派任务给专业 Agent",
+      "会议旁听 + 自动方案匹配闭环"
+    ],
+    progress: [
+      { done: true, text: "7+ Agent 在线，路由规则完善" },
+      { done: true, text: "Agent-to-Agent 任务分派流程跑通" },
+      { done: true, text: "会议旁听 + 自动跟进方案上线" },
+      { done: false, text: "旁听脚本 V6 修复（会议结束检测）" },
+      { done: false, text: "SkillHub 检索层优化（IDF + 时间衰减）" }
+    ],
+    milestones: [
+      { date: "2026-Q1", event: "Hermes 主 Agent 上线" },
+      { date: "2026-04", event: "多 Agent 群搭建" },
+      { date: "2026-06", event: "Agent-to-Agent 任务分派验证" },
+      { date: "2026-07", event: "会议旁听 + 自动方案匹配" }
+    ],
+    logs: [
+      { date: "2026-07-28", text: "旁听脚本 V6 修复; lark-cli 1.0.79" },
+      { date: "2026-07-27", text: "群内新增安全合规业务助手 Agent" }
+    ]
+  },
+  {
+    id: "skillhub",
+    title: "SkillHub 技能仓库",
+    status: "active",
+    priority: "medium",
+    category: "personal",
+    startDate: "2026-05",
+    tags: ["Skill", "GitHub", "开源", "知识库"],
+    summary: "个人 Skill 开源仓库，将日常工作流沉淀为可下载复用的 Skill 文件",
+    goals: [
+      "把高频 AI 工作流沉淀为标准 Skill 文件",
+      "降低他人复用门槛，推动开源生态",
+      "检索层优化（IDF + 时间衰减）"
+    ],
+    progress: [
+      { done: true, text: "GitHub 仓库建立并公开" },
+      { done: true, text: "8 个核心 Skill 已上架" },
+      { done: false, text: "检索层优化（IDF + 时间衰减）" },
+      { done: false, text: "TRAE Work 版本 Skill 移植" }
+    ],
+    milestones: [
+      { date: "2026-05", event: "SkillHub 仓库建立" },
+      { date: "2026-06", event: "首个外部用户下载使用" },
+      { date: "2026-07", event: "检索层架构优化（参考 Cerebras）" }
+    ],
+    logs: [
+      { date: "2026-07-28", text: "完成 Skill 清单整理（8 个核心 Skill）" }
+    ]
+  }
+];
+
+// Stats
+const activeCount = projects.filter(p => p.status === 'active').length;
+document.getElementById('stat-active').textContent = activeCount;
+document.getElementById('stat-total').textContent = projects.length;
+
+// Card status -> badge class
+function badgeClass(status) {
+  if (status === 'active') return 'badge-active';
+  if (status === 'paused') return 'badge-paused';
+  return 'badge-critical';
+}
+function statusLabel(status) {
+  if (status === 'active') return '进行中';
+  if (status === 'paused') return '暂停';
+  return '已完成';
+}
+
+// Render project cards
+const list = document.getElementById('project-list');
+projects.forEach(p => {
+  const card = document.createElement('div');
+  card.className = 'project-card';
+  card.onclick = () => openDetail(p.id);
+  const doneCount = p.progress.filter(i => i.done).length;
+  const totalCount = p.progress.length;
+  card.innerHTML = `
+    <span class="badge ${badgeClass(p.status)}">${statusLabel(p.status)}</span>
+    <h2>${p.title}</h2>
+    <p class="summary">${p.summary}</p>
+    <div style="margin:8px 0;font-size:0.75rem;color:var(--text-dim)">
+      进度 ${doneCount}/${totalCount} · ${p.tags.join(' · ')}
+    </div>
+    <div class="bar"><div class="bar-fill ${p.status}" style="width:${(doneCount/totalCount*100)}%"></div></div>
+  `;
+  list.appendChild(card);
+});
+
+// Detail panel
+function openDetail(id) {
+  const p = projects.find(p => p.id === id);
+  if (!p) return;
+  const doneCount = p.progress.filter(i => i.done).length;
+  const totalCount = p.progress.length;
+  const progressItems = p.progress.map(i => `<li>${i.done ? '✅' : '🔄'} ${i.text}</li>`).join('');
+  const milestoneRows = p.milestones.map(m => `<tr><td>${m.date}</td><td>${m.event}</td></tr>`).join('');
+  const logItems = p.logs.map(l => `<div class="timeline-item"><div class="date">${l.date}</div><div class="content">${l.text}</div></div>`).join('');
+
+  document.getElementById('panel').innerHTML = `
+    <button class="close-btn" onclick="closeDetail()">✕</button>
+    <span class="badge ${badgeClass(p.status)}" style="margin-bottom:8px">${statusLabel(p.status)}</span>
+    <h2>${p.title}</h2>
+    <p style="color:var(--text-dim);margin-bottom:16px">${p.summary}</p>
+
+    <div style="display:flex;gap:16px;font-size:0.8rem;color:var(--text-dim);margin-bottom:16px">
+      <span>📅 ${p.startDate}</span>
+      <span>🏷 ${p.tags.join(' · ')}</span>
+      <span>${doneCount}/${totalCount} 完成</span>
+    </div>
+
+    <div class="bar" style="margin-bottom:20px">
+      <div class="bar-fill ${p.status}" style="width:${(doneCount/totalCount*100)}%"></div>
+    </div>
+
+    <h3>核心目标</h3>
+    <ul>${p.goals.map(g => `<li>${g}</li>`).join('')}</ul>
+
+    <h3>当前进展</h3>
+    <ul>${progressItems}</ul>
+
+    <h3>关键节点</h3>
+    <table>${milestoneRows}</table>
+
+    <h3>开发日志</h3>
+    <div class="timeline">${logItems}</div>
+  `;
+  document.getElementById('overlay').classList.add('open');
+  document.body.style.overflow = 'hidden';
+}
+
+function closeDetail() {
+  document.getElementById('overlay').classList.remove('open');
+  document.body.style.overflow = '';
+}
+
+// Keyboard
+document.addEventListener('keydown', e => {
+  if (e.key === 'Escape') closeDetail();
+});
+</script>
+</body>
+</html>
