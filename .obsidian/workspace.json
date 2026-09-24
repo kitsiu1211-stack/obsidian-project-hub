@@ -68,7 +68,9 @@
               "type": "file-explorer",
               "state": {
                 "sortOrder": "alphabetical",
-                "autoReveal": false
+                "autoReveal": false,
+                "showSearch": false,
+                "searchQuery": ""
               },
               "icon": "lucide-folder-closed",
               "title": "文件列表"
@@ -213,6 +215,11 @@
   },
   "active": "9d2b1b690171a7c7",
   "lastOpenFiles": [
+    "concepts/主题33-Agent任务执行的三层防护机制.md",
+    "AI培训/2026-08 WeWork 荣誉讲师.md",
+    "reviews/2026-W34.md",
+    "AI培训/2026-08-14 培训分享反馈复盘.md",
+    "AI场景/文章分析/20260815T132047--百丽企业AI落地.md",
     "AI工具与框架/Cerebras知识库架构.md",
     "AI工具与框架",
     "reviews/2026-W30.md",
@@ -240,16 +247,11 @@
     "hermes-skills/feishu-meeting-listen/versions/V3-dual-tts-20260717.md",
     "concepts/主题1-Agentic Coding.md",
     "hermes-skills/index.md",
-    "hermes-skills/feishu-meeting-listen/versions/V3-restored-20260716.md",
-    "hermes-skills/feishu-meeting-listen/retrospective.md",
     "hermes-skills/feishu-meeting-listen/poll.sh",
     "hermes-skills/feishu-meeting-listen/meeting_detect.py",
-    "hermes-skills/feishu-meeting-listen/SKILL.md",
     "hermes-skills/feishu-meeting-listen/versions",
     "hermes-skills/feishu-meeting-listen",
     "hermes-skills",
-    "reviews/2026-W28.md",
-    "concepts/feishu-auth.png",
-    "clients/智能派-ELEGOO.md"
+    "concepts/feishu-auth.png"
   ]
 }

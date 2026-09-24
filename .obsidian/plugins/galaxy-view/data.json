@@ -30,6 +30,10 @@
   "showUnresolved": false,
   "showOrphans": true,
   "showTags": false,
+  "tagLens": null,
+  "colorByTag": false,
+  "showTagHubs": false,
+  "tagHubLimit": 20,
   "hiddenFolders": [],
   "filterQuery": "",
   "showGhostEdges": false,
@@ -73,295 +77,400 @@
     }
   ],
   "positionCache": {
-    "AI培训/AI基础概念入门.md": [
-      -164.2,
+    "人机协作范式.md": [
+      -285.5,
       0,
-      51.2
+      -106.7
     ],
-    "AI培训/README.md": [
-      -199.7,
+    "reviews/2026-W32.md": [
+      -211.7,
       0,
-      107.4
-    ],
-    "AI培训/2026-07-23 亚洲商学院分享复盘.md": [
-      -138.3,
-      0,
-      110.5
-    ],
-    "AI场景/A2A链路故障记录.md": [
-      -45.5,
-      -1.8,
-      -151.6
-    ],
-    "AI场景/Agent协作群-Bot路由表.md": [
-      -100.9,
-      -0.1,
-      -197
-    ],
-    "AI场景/AI外语教练.md": [
-      -221.9,
-      0,
-      -38
+      -94.1
     ],
     "reviews/2026-W30.md": [
-      -119.2,
-      -0.2,
-      -137.8
+      107.5,
+      0,
+      -208.4
+    ],
+    "reviews/2026-W34.md": [
+      -81.2,
+      -0.1,
+      -59.7
+    ],
+    "reviews/2026-W33.md": [
+      -107.3,
+      -0.1,
+      39.1
     ],
     "reviews/2026-W28.md": [
-      22.2,
+      -68.9,
       0,
-      -311.4
+      -298.6
     ],
-    "raw/articles/feishu-ai-thinking-knowledge-graph.md": [
-      252.1,
+    "reviews/2026-W31.md": [
+      -15.3,
       0,
-      -208.8
+      -227.6
+    ],
+    "未命名.canvas": [
+      43.2,
+      0,
+      -195.8
     ],
     "review-schedule.md": [
-      83.5,
-      -12.4,
-      -42.5
-    ],
-    "SCHEMA.md": [
-      35.9,
-      11.4,
-      11.1
-    ],
-    "log.md": [
-      12.1,
-      6.4,
-      -30.9
-    ],
-    "index.md": [
-      83,
-      12.7,
-      -40.7
-    ],
-    "concepts/主题30-团队智能体信息联动与GBrain扩展.md": [
-      -4,
-      -1.1,
-      -167.1
-    ],
-    "concepts/主题29-单Agent到多Agent的演进时机.md": [
-      27.6,
-      -18.5,
-      -85.5
-    ],
-    "concepts/主题28-晋升驱动AI转型.md": [
-      168.7,
-      -0.1,
-      56.5
-    ],
-    "concepts/主题9-AI Native范式.md": [
-      71.9,
-      9.5,
-      28.7
-    ],
-    "concepts/主题4-训模型式管理.md": [
-      176.2,
-      -5.7,
-      -66.7
-    ],
-    "concepts/主题8-PaperClip Skill设计.md": [
-      108.8,
-      -12.2,
-      -110.4
+      120.8,
+      -13.4,
+      38
     ],
     "concepts/主题7-暗知识壁垒与卡点思维.md": [
-      61.4,
-      -1,
-      82.3
+      52.9,
+      2.3,
+      143.1
     ],
-    "concepts/主题6-提示词工程.md": [
-      30.7,
-      7.6,
-      -55.3
+    "concepts/主题9-AI Native范式.md": [
+      70.2,
+      -2.5,
+      109
+    ],
+    "concepts/主题8-PaperClip Skill设计.md": [
+      173.2,
+      -0.9,
+      4.4
     ],
     "concepts/主题5-AI落地框架.md": [
-      82.7,
-      -13.7,
-      10.6
+      89.4,
+      12.3,
+      82.3
     ],
-    "concepts/主题3-Harness工程.md": [
-      129.7,
-      1.1,
-      -78.1
+    "concepts/主题4-训模型式管理.md": [
+      208.3,
+      4,
+      44.9
+    ],
+    "concepts/主题6-提示词工程.md": [
+      42.6,
+      -14.3,
+      19
     ],
     "concepts/主题27-心跳机制价值函数.md": [
-      119.6,
-      8,
-      65.4
+      124.7,
+      -0.5,
+      149.3
     ],
-    "concepts/主题26-泊松过程与成功积累.md": [
-      136.6,
-      -5.2,
-      81.2
-    ],
-    "concepts/主题25-反馈即负熵与人机协作怀疑论.md": [
-      110.4,
-      11.9,
-      -134.5
+    "concepts/主题33-Agent任务执行的三层防护机制.md": [
+      88,
+      -11.7,
+      6.8
     ],
     "concepts/主题24-Agent时代个人知识图谱构建链路.md": [
-      -5.2,
-      6.2,
-      -83.9
+      151.6,
+      2.5,
+      -39.6
     ],
-    "concepts/主题23-Anthropic组织文化.md": [
-      162.6,
-      1.7,
-      -116.8
+    "concepts/主题32-GEO与难伪造护城河.md": [
+      68.8,
+      -2.9,
+      183.9
+    ],
+    "concepts/主题31-AI Native 三段论.md": [
+      1.5,
+      -0.7,
+      148.3
+    ],
+    "concepts/主题29-单Agent到多Agent的演进时机.md": [
+      88.1,
+      3.8,
+      -59.7
+    ],
+    "concepts/主题30-团队智能体信息联动与GBrain扩展.md": [
+      176.4,
+      0.7,
+      -103.3
+    ],
+    "concepts/主题3-Harness工程.md": [
+      161.3,
+      1.5,
+      38.4
     ],
     "concepts/主题22-Skill 设计方法论.md": [
-      111.4,
-      -5.5,
-      -5.7
+      123.3,
+      15.2,
+      96.2
+    ],
+    "concepts/主题28-晋升驱动AI转型.md": [
+      161.6,
+      -0.3,
+      160.8
+    ],
+    "concepts/主题26-泊松过程与成功积累.md": [
+      125.6,
+      2.7,
+      186.1
+    ],
+    "concepts/主题25-反馈即负熵与人机协作怀疑论.md": [
+      98,
+      -20,
+      80.4
+    ],
+    "concepts/主题23-Anthropic组织文化.md": [
+      219.6,
+      -1.2,
+      1.2
     ],
     "concepts/主题21-AI原生组织建设.md": [
-      160.3,
-      12,
-      9.1
+      169.9,
+      7.8,
+      91.9
     ],
     "concepts/主题20-可复制性与涌现概率框架.md": [
-      160.6,
-      -15.9,
-      -10.2
+      169.8,
+      3.8,
+      126.8
     ],
     "concepts/主题2-多Agent架构.md": [
-      47.3,
-      -1.1,
-      -152.5
+      132.5,
+      -3.8,
+      -64.6
     ],
     "concepts/主题19-Context not Control 的三层同构.md": [
-      152.9,
-      13.5,
-      -37.4
-    ],
-    "concepts/主题18-目标式Prompt vs 命令式Prompt.md": [
-      27.6,
-      4.5,
-      -111.6
-    ],
-    "concepts/主题17-中美AI谈判与普通人机会框架.md": [
-      26.8,
-      -4.5,
-      38.5
-    ],
-    "concepts/主题16-消费电子行业报告反驳方法论.md": [
-      131.8,
-      -0.9,
-      28.3
-    ],
-    "concepts/主题15-Vibe调研法.md": [
-      -14.3,
-      0.1,
-      30.2
-    ],
-    "concepts/主题14-张一鸣管理哲学.md": [
-      201.8,
-      -1.3,
-      2.1
-    ],
-    "concepts/主题13-大模型架构与知识编译范式.md": [
-      72.5,
-      -2.2,
-      -125.7
+      191.5,
+      -11.5,
+      84.6
     ],
     "concepts/主题12-AI转型与组织.md": [
-      209.2,
-      1.2,
-      -46.8
+      237.5,
+      0.8,
+      73.5
     ],
-    "concepts/主题11-模型选择策略.md": [
-      56.2,
-      7.5,
-      -99.5
+    "concepts/主题18-目标式Prompt vs 命令式Prompt.md": [
+      80.2,
+      -15.1,
+      -23.6
+    ],
+    "concepts/主题17-中美AI谈判与普通人机会框架.md": [
+      23.2,
+      -2.2,
+      99.7
+    ],
+    "concepts/主题13-大模型架构与知识编译范式.md": [
+      173.6,
+      0.1,
+      -25.8
+    ],
+    "concepts/主题16-消费电子行业报告反驳方法论.md": [
+      135.8,
+      -10,
+      114.1
+    ],
+    "concepts/主题14-张一鸣管理哲学.md": [
+      214.2,
+      0.9,
+      124.2
+    ],
+    "concepts/主题15-Vibe调研法.md": [
+      -1.1,
+      0.6,
+      63.8
     ],
     "concepts/主题10-AI暴露度.md": [
-      6.6,
-      -10.1,
-      -1.1
+      23.3,
+      -2,
+      37.6
+    ],
+    "concepts/主题11-模型选择策略.md": [
+      98.7,
+      10.9,
+      -32.8
     ],
     "concepts/主题1-Agentic Coding.md": [
-      -29.9,
-      0.1,
-      -45
+      12.2,
+      -0.8,
+      -19.3
     ],
     "concepts/_weekly-reads.md": [
-      -283.6,
-      0,
-      -89.1
-    ],
-    "hermes-skills/manager-ai-onboarding/framework-v1.0.md": [
-      -242.4,
-      0,
-      22.5
-    ],
-    "hermes-skills/index.md": [
-      215.6,
-      0,
-      195.6
-    ],
-    "hermes-skills/feishu-meeting-listen/agent-join-meeting.md": [
-      15.2,
-      0,
-      208.1
-    ],
-    "hermes-skills/feishu-meeting-listen/v4-archive-20260717.md": [
-      -155.7,
-      0,
-      205.6
-    ],
-    "hermes-skills/feishu-meeting-listen/polling.md": [
-      -102.9,
-      0,
-      284.5
-    ],
-    "hermes-skills/feishu-meeting-listen/versions/V4-realtime-asr-20260717.md": [
-      -67,
-      0,
-      211.6
-    ],
-    "hermes-skills/feishu-meeting-listen/versions/V3-dual-tts-20260717.md": [
-      154.6,
-      0,
-      244.3
-    ],
-    "hermes-skills/feishu-meeting-listen/versions/V3-restored-20260716.md": [
-      -179.4,
-      0,
-      -248.2
-    ],
-    "hermes-skills/feishu-meeting-listen/retrospective.md": [
-      4,
-      0,
-      299.8
-    ],
-    "hermes-skills/feishu-meeting-listen/SKILL.md": [
-      -231.9,
-      0,
-      210.4
-    ],
-    "clients/智能派-ELEGOO.md": [
-      286.2,
-      0,
-      123.4
-    ],
-    "clients/双鹰玩具.md": [
-      325.4,
-      0,
-      -9.5
-    ],
-    "clients/_TEMPLATE.md": [
       -305.2,
       0,
-      72.3
+      -25
+    ],
+    "raw/articles/feishu-ai-thinking-knowledge-graph.md": [
+      38.3,
+      0,
+      -317.7
+    ],
+    "log.md": [
+      53.4,
+      16.2,
+      -6.7
+    ],
+    "index.md": [
+      113.6,
+      14.1,
+      34.6
+    ],
+    "hermes-skills/manager-ai-onboarding/framework-v1.0.md": [
+      -282.9,
+      0,
+      115.9
+    ],
+    "hermes-skills/index.md": [
+      315.9,
+      -0.1,
+      113.9
+    ],
+    "hermes-skills/feishu-meeting-listen/retrospective.md": [
+      76.7,
+      0,
+      291.9
+    ],
+    "hermes-skills/feishu-meeting-listen/v4-archive-20260717.md": [
+      -165.9,
+      0,
+      228.7
+    ],
+    "hermes-skills/feishu-meeting-listen/versions/V4-realtime-asr-20260717.md": [
+      -105.7,
+      0,
+      214.2
+    ],
+    "hermes-skills/feishu-meeting-listen/versions/V3-restored-20260716.md": [
+      -247.4,
+      0,
+      -182.1
+    ],
+    "hermes-skills/feishu-meeting-listen/versions/V3-dual-tts-20260717.md": [
+      186,
+      0,
+      265
+    ],
+    "hermes-skills/feishu-meeting-listen/polling.md": [
+      0.5,
+      0,
+      306.4
+    ],
+    "hermes-skills/feishu-meeting-listen/agent-join-meeting.md": [
+      -127.8,
+      0,
+      141.2
+    ],
+    "hermes-skills/feishu-meeting-listen/SKILL.md": [
+      -94.6,
+      0,
+      287
+    ],
+    "Projects/飞书 AI 专项.md": [
+      36.9,
+      0,
+      -256.8
+    ],
+    "Projects/TRAE Work Specialist.md": [
+      -120.8,
+      0,
+      -153
+    ],
+    "Projects/SkillHub 技能仓库.md": [
+      -116.5,
+      0,
+      -94.7
+    ],
+    "Projects/Hermes Agent 协作体系.md": [
+      -61.4,
+      0,
+      -130.8
+    ],
+    "clients/智能派-ELEGOO.md": [
+      261.7,
+      0,
+      -161.4
+    ],
+    "clients/双鹰玩具.md": [
+      158.4,
+      0,
+      -266
+    ],
+    "clients/_TEMPLATE.md": [
+      -226.4,
+      0,
+      200.2
     ],
     "clients/Liberlive.md": [
-      91.4,
+      -39.2,
       0,
-      280.5
+      243.1
+    ],
+    "SCHEMA.md": [
+      44.4,
+      15.9,
+      53.5
+    ],
+    "AI工具与框架/Cerebras知识库架构.md": [
+      -187,
+      0,
+      -242.5
+    ],
+    "AI培训/README.md": [
+      -186.7,
+      0,
+      110.8
+    ],
+    "AI培训/AI基础概念入门.md": [
+      -227.6,
+      0,
+      73.8
+    ],
+    "AI培训/2026-08-14 培训分享反馈复盘.md": [
+      -195.8,
+      0,
+      25.2
+    ],
+    "AI培训/2026-08 WeWork 荣誉讲师.md": [
+      -143.2,
+      0,
+      -7.2
+    ],
+    "AI培训/2026-07-23 亚洲商学院分享复盘.md": [
+      -153.9,
+      0,
+      62.8
+    ],
+    "AI场景/豆包工作-demo试用清单.md": [
+      -182,
+      0,
+      -169.3
+    ],
+    "AI场景/文章分析/20260812T100000--艾瑞企业AI_Agent发展洞察报告.md": [
+      -71.7,
+      0,
+      -197.4
+    ],
+    "AI场景/文章分析/20260815T132047--百丽企业AI落地.md": [
+      10.9,
+      0,
+      -143.8
+    ],
+    "AI场景/文章分析/20260812T085524--红杉李彦男AI硬件投资框架.md": [
+      -123.8,
+      0,
+      -262
+    ],
+    "AI场景/Skill路由表.md": [
+      -211.6,
+      0,
+      -38.1
+    ],
+    "AI场景/Agent协作群-Bot路由表.md": [
+      165.8,
+      0,
+      -192.6
+    ],
+    "AI场景/AI外语教练.md": [
+      -291.8,
+      0,
+      52.2
+    ],
+    "AI场景/A2A链路故障记录.md": [
+      119,
+      0.1,
+      -138.7
     ]
   }
 }
