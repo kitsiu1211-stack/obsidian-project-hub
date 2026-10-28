@@ -22,6 +22,7 @@ source: lark-cli im +chat-members-list --chat-id oc_219a613c13292855c2dc4b80e59d
 | 9 | 实习生 - 小帅 | `ou_4bc03452642a3b90fcf70a91aba695ea` | 实习生 Bot |
 | 10 | Kimi Code | `ou_75e812630b3c51fc879295c78424898c` | 编码助手 |
 | 11 | 企鹅兄弟 | `ou_a7276d80c5abc2abfd8da3140ac94e65` | 娱乐/互动 |
+| 12 | Mark | `ou_717542d728602a3779b242443d99c838` | 端到端项目推进（2026-10-28 入群；与浪子分工：他推进、浪子管事实层与定时任务） |
 
 ## 路由规则
 
